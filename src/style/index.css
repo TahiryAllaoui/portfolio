@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'Hanken';
+  src: url('../assets/fonts/HankenGrotesk-VariableFont_wght.ttf');
+}
+
+:root {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Hanken', sans-serif;
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  font-family: 'Hanken', sans-serif;
+}
