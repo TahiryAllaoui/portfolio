@@ -1,0 +1,50 @@
+@import '../style/colors.scss';
+
+.Header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15%;
+    background-color: $Primary;
+    color: $Color;
+    box-shadow: 0 0 5px 1px #f1f1f153;
+
+    .assets {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 45%;
+
+
+
+        .links {
+
+            &:first-child {
+                background-color: $Secondary;
+            }
+
+            &:hover {
+                background-color: $Tertiary;
+            }
+
+            &:last-child {
+                height: 50%;
+                border: 2px solid #f1f1f1;
+                border-radius: 5rem;
+                margin-left: 2rem;
+
+                &:hover {
+                    background-color: #f1f1f128;
+                }
+            }
+
+            transition: background-color 300ms;
+            color: $Color;
+            text-decoration: none;
+            width: 25%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
