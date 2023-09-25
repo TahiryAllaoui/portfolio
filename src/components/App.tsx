@@ -1,11 +1,14 @@
+import { BrowserRouter } from 'react-router-dom'
 import '../style/App.scss'
 
 function App() {
 
   return (
-    <div className='app'>
+    <BrowserRouter>
+      <div className='app'>
 
-    </div>
+      </div>
+    </BrowserRouter>
   )
 }
 
