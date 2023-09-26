@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import '../style/Header.scss';
 
 
@@ -7,10 +6,10 @@ function Header() {
         <div className='Header'>
             <h2>Portfolio</h2>
             <div className="assets">
-                <Link to='/' className='links'>About</Link>
-                <Link to='/projects' className='links'>Projects</Link>
-                <Link to='/contact' className='links'>Contact</Link>
-                <Link to='/hiring' className='links'>Hire me</Link>
+                <a href='/' className='links'>About</a>
+                <a href='/projects' className='links'>Projects</a>
+                <a href='/contact' className='links'>Contact</a>
+                <a href='/hiring' className='links'>Hire me</a>
             </div>
         </div>
     )
