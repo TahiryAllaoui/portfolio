@@ -18,6 +18,8 @@
     align-items: center;
 
     .description {
+        border-left: 2px solid $Hover;
+        padding-left: 2rem;
         color: $Color ;
         width: 50%;
 
@@ -48,7 +50,7 @@
         height: 70%;
         border-bottom: 3px $Hover;
         border-bottom-style: solid;
-        background-image: url('../assets/images/test.png');
+        background-image: url('../assets/images/profile.png');
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;

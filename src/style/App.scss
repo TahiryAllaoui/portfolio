@@ -6,7 +6,7 @@
 }
 
 .app {
-  background-color: $Primary;
+  background: radial-gradient($Primary, #000000);
   width: 100%;
   min-height: 100%;
 }
