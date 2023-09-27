@@ -8,6 +8,7 @@ function App() {
 
   return (
     <div className='app'>
+      <div className="line"></div>
       <Header />
       <About />
       <Skills />

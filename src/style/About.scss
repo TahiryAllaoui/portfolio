@@ -1,14 +1,14 @@
 @import '../style/colors.scss';
 
-// @keyframes grow {
-//     from {
-//         height: 0;
-//     }
+@keyframes rotates {
+    from {
+        transform: rotate(0);
+    }
 
-//     to {
-//         height: 70%;
-//     }
-// }
+    to {
+        transform: rotate(360deg);
+    }
+}
 
 .About {
     padding: 0 15%;
@@ -30,7 +30,7 @@
             line-height: 3rem;
 
             span {
-                color: $Hover;
+                color: $Secondary;
                 margin-left: 3rem;
             }
         }
@@ -40,6 +40,11 @@
             font-size: large;
 
             span {
+                img {
+                    animation: rotates 3000ms infinite;
+                    width: 20px;
+                }
+
                 color: aqua;
             }
         }

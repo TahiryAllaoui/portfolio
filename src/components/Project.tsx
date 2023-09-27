@@ -11,6 +11,7 @@ interface Project {
     name: string;
     description: string;
     link: string;
+    git: string;
 }
 
 
@@ -19,32 +20,38 @@ function Project() {
         bg: cards,
         name: 'Interactive card details',
         description: 'Enter your datas in a form and see them being rendered dynamically',
-        link: 'https://interactive-card-details-fem.netlify.app/'
+        link: 'https://interactive-card-details-fem.netlify.app/',
+        git: 'https://github.com/TahiryAllaoui/Interactive-Card-Details'
     }, {
         bg: country,
         name: 'REST Countries API',
         description: 'Scroll trough all countries detail with a Color Theme Switcher',
-        link: 'https://countries-api-fem-site.netlify.app/'
+        link: 'https://countries-api-fem-site.netlify.app/',
+        git: 'https://github.com/TahiryAllaoui/Rest-country-API'
     }, {
         bg: homepage,
         name: 'News homepage',
         description: 'A landing page template for a News, a Blog,...',
-        link: 'https://homepage-component-fem.netlify.app/'
+        link: 'https://homepage-component-fem.netlify.app/',
+        git: 'https://github.com/TahiryAllaoui/Homepage-component'
     }, {
         bg: multiform,
         name: 'Multi-step form',
         description: 'Template for a Subcription form',
-        link: 'https://multi-form-fem.netlify.app/'
+        link: 'https://multi-form-fem.netlify.app/',
+        git: 'https://github.com/TahiryAllaoui/Results-Summary-Component'
     }, {
         bg: rps,
         name: 'Rock-Paper-Scissors',
         description: 'Wanna chill a bit? Here\' s a little basic game',
-        link: 'https://rock-paper-scissors-fem-site.netlify.app/'
+        link: 'https://rock-paper-scissors-fem-site.netlify.app/',
+        git: 'https://github.com/TahiryAllaoui/Rock-paper-scissors'
     }, {
         bg: space,
         name: 'Space tourism',
         description: 'A multi-page webstie about a trip to the space',
-        link: 'https://space-tourism-site-fem.netlify.app/'
+        link: 'https://space-tourism-site-fem.netlify.app/',
+        git: 'https://github.com/TahiryAllaoui/Space-tourism'
     }]
     return (
         <div className="Project">
@@ -58,7 +65,10 @@ function Project() {
                             <div className="project-description">{item.description}</div>
                         </div>
                     </div>
-                    <a className="preview" href={`${item.link}`}>Preview</a>
+                    <div className="link-container">
+                        <a className="preview" href={`${item.link}`}>Preview</a>
+                        <a className='git' href={`${item.git}`}>View code</a>
+                    </div>
                 </div>)}
             </div>
         </div>
