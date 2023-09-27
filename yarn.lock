@@ -477,6 +477,11 @@
   resolved "https://registry.yarnpkg.com/@types/semver/-/semver-7.5.0.tgz#591c1ce3a702c45ee15f47a42ade72c2fd78978a"
   integrity sha512-G8hZ6XJiHnuhQKR7ZmysCeJWE08o8T0AXtk5darsCaTVsYZhhgUrq53jizaR2FvsoeCwJhlmwTjkXBY5Pn/ZHw==
 
+"@types/svg-path-parser@^1.1.3":
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/@types/svg-path-parser/-/svg-path-parser-1.1.4.tgz#7c1afed2a6f484e89e50c176de10606db0aa6b79"
+  integrity sha512-i7qKm8qNFGl6rww2SNuU3Bmheia0xZFlu+M3HLU7ol5aVFRxq9rvpBhQEA2V/v0w2Sd12ZMRMrdMjCR8e81ejA==
+
 "@typescript-eslint/eslint-plugin@^6.0.0":
   version "6.1.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-6.1.0.tgz#96f3ca6615717659d06c9f7161a1d14ab0c49c66"
@@ -1193,6 +1198,11 @@ levn@^0.4.1:
     prelude-ls "^1.2.1"
     type-check "~0.4.0"
 
+line-chart-react@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/line-chart-react/-/line-chart-react-1.0.1.tgz#891088ec8cc86c2f9f63c0afd0247003c94fbdb1"
+  integrity sha512-FxgVeTTcEgSPOZDEBxshrn6q/b57+GXQFKHsjY7bMKzVso1S1AZtzTp256OY3vSBmo6kL3+PyI/ecC0JAqu6AA==
+
 locate-path@^6.0.0:
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/locate-path/-/locate-path-6.0.0.tgz#55321eb309febbc59c4801d931a72452a681d286"
@@ -1392,6 +1402,13 @@ react-icons@^4.10.1:
   version "4.10.1"
   resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.10.1.tgz#3f3b5eec1f63c1796f6a26174a1091ca6437a500"
   integrity sha512-/ngzDP/77tlCfqthiiGNZeYFACw85fUjZtLbedmJ5DTlNDIwETxhwBzdOJ21zj4iJdvc0J3y7yOsX3PpxAJzrw==
+
+react-minimal-pie-chart@^8.4.0:
+  version "8.4.0"
+  resolved "https://registry.yarnpkg.com/react-minimal-pie-chart/-/react-minimal-pie-chart-8.4.0.tgz#c784dd3dffa9aee5c5396c0cb8ece814fd02e0e8"
+  integrity sha512-A0wG+6mRjboyMxMDrzQNWp+2+GSn2ai4ERzRFHLp/OCC45PwIR1DpDVjwedawO+5AtFpzBRQKSFm3ZUxrqIEzA==
+  dependencies:
+    "@types/svg-path-parser" "^1.1.3"
 
 react-refresh@^0.14.0:
   version "0.14.0"
