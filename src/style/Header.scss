@@ -1,5 +1,15 @@
 @import '../style/colors.scss';
 
+@keyframes border-light {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 .Header {
     display: flex;
     justify-content: space-between;
@@ -31,14 +41,63 @@
             }
 
             &:last-child {
+                position: relative;
                 height: 50%;
                 border-radius: 5rem;
                 margin-left: 2rem;
                 transition: all 300ms;
-                border: 2px solid white;
+                width: 25%;
+                background-color: black;
+                overflow: hidden;
+
+                a {
+                    text-decoration: none;
+                    color: $Color;
+                    inset: 2px;
+                    position: absolute;
+                    z-index: 5;
+                    background-color: $Primary;
+                    border-radius: 4rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: all 300ms;
+
+                    &:hover {
+                        background-color: #3d3d3d;
+                    }
+                }
+
+                // border: 2px solid white;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: -55%;
+                    left: -1%;
+                    width: 50px;
+                    height: 50px;
+                    background: linear-gradient(60deg, transparent, $Secondary, $Secondary);
+                    transform-origin: bottom right;
+                    animation: border-light 6s linear infinite;
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: -55%;
+                    left: -2%;
+                    width: 50px;
+                    height: 50px;
+                    background: linear-gradient(60deg, transparent, $Secondary, $Secondary);
+                    transform-origin: bottom right;
+                    animation: border-light 6s linear infinite;
+                    animation-delay: -3s;
+                }
+
 
                 &:hover {
-                    background-color: #71717178;
+                    background-color: $Secondary;
                 }
             }
 

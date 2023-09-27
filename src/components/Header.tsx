@@ -9,7 +9,9 @@ function Header() {
                 <a href='/' className='links'>About</a>
                 <a href='/projects' className='links'>Projects</a>
                 <a href='/contact' className='links'>Contact</a>
-                <a href='/hiring' className='links'>Hire me</a>
+                <div className='links'>
+                    <a href='/hiring' >Hire me</a>
+                </div>
             </div>
         </div>
     )

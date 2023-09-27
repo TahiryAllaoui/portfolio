@@ -41,7 +41,7 @@
 
             span {
                 img {
-                    animation: rotates 3000ms infinite;
+                    animation: rotates 3000ms infinite linear;
                     width: 20px;
                 }
 
