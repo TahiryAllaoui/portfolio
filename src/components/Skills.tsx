@@ -31,7 +31,8 @@ function Skills() {
     return (
         <div className="Skills">
 
-            <div id="skill-container" style={{ width: 'calc(100%)', height: '75vh', display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', border: '2px solid gray', borderRadius: '1rem', background: 'radial-gradient(\'gray\',\'gray\')' }}>
+            <h2>Skills:</h2>
+            <div id="skill-container" >
 
                 {skill.map(item => <div className="pie" key={item.tech} style={{ padding: '0 3rem', position: 'relative', width: '10rem', height: '10rem', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-between', color: 'white' }}>
                     <PieChart
