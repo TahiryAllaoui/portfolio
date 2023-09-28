@@ -34,7 +34,7 @@ function Skills() {
             <h2>Skills:</h2>
             <div id="skill-container" >
 
-                {skill.map(item => <div className="pie" key={item.tech} style={{ padding: '0 3rem', position: 'relative', width: '10rem', height: '10rem', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-between', color: 'white' }}>
+                {skill.map(item => <div className="pie" key={item.tech}>
                     <PieChart
                         className="chart"
                         data={[{ value: item.perf - 5, color: "url(#gradient-1)" }]}
@@ -53,7 +53,7 @@ function Skills() {
                         animate={true}
                         animationDuration={1500}
                     />
-                    <div className="descri" style={{ position: 'absolute', top: '35%', display: 'flex', justifyContent: "center", alignItems: "center", flexDirection: 'column' }}>
+                    <div className="descri">
                         <p className="perf" style={{ margin: '0' }}>{item.perf}%</p>
                         <p className="tech" style={{ margin: '0' }}>{item.tech}</p>
                     </div>
