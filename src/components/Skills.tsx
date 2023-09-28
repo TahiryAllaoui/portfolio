@@ -28,35 +28,38 @@ function Skills() {
         perf: 31
     }]
 
-    const item = useRef<HTMLDivElement | null>(null);
-    useEffect(() => {
-        item.current!.style.animation = "fade-in 1500ms linear";
-    }, []);
-
     return (
-        <div ref={item} id="skill-container" style={{ width: 'calc(100% - 15rem)', height: '50vh', display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center' }}>
+        <div className="Skills">
 
-            {skill.map(item => <div className="pie" key={item.tech} style={{ width: '15rem', height: '15rem', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-between', color: 'white' }}>
-                <PieChart
-                    className="chart"
-                    data={[{ value: item.perf - 5, color: "url(#gradient-1)" }]}
-                    totalValue={100}
-                    lineWidth={25}
-                    children={
-                        <linearGradient id="gradient-1">
-                            <stop offset="25%" stopColor="#8e0c0c" />
-                            <stop offset="75%" stopColor="#cb7a7a" />
-                        </linearGradient>
-                    }
-                    rounded={true}
-                    animate={true}
-                    animationDuration={1500}
-                />
-                <p className="perf">{item.perf}%</p>
-                <p className="tech">{item.tech}</p>
+            <div id="skill-container" style={{ width: 'calc(100%)', height: '75vh', display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', border: '2px solid gray', borderRadius: '1rem', background: 'radial-gradient(\'gray\',\'gray\')' }}>
+
+                {skill.map(item => <div className="pie" key={item.tech} style={{ padding: '0 3rem', position: 'relative', width: '10rem', height: '10rem', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-between', color: 'white' }}>
+                    <PieChart
+                        className="chart"
+                        data={[{ value: item.perf - 5, color: "url(#gradient-1)" }]}
+                        totalValue={100}
+                        lineWidth={25}
+                        background="gray"
+                        startAngle={-90}
+                        children={
+                            <linearGradient id="gradient-1">
+                                <stop offset="25%" stopColor="#FF3333" />
+                                <stop offset="75%" stopColor="#a50101" />
+                            </linearGradient>
+                        }
+                        rounded={false}
+                        animationEasing="ease-out"
+                        animate={true}
+                        animationDuration={1500}
+                    />
+                    <div className="descri" style={{ position: 'absolute', top: '35%', display: 'flex', justifyContent: "center", alignItems: "center", flexDirection: 'column' }}>
+                        <p className="perf" style={{ margin: '0' }}>{item.perf}%</p>
+                        <p className="tech" style={{ margin: '0' }}>{item.tech}</p>
+                    </div>
+                </div>
+                )}
             </div>
-            )}
-        </div>
+        </div >
     );
 }
 
