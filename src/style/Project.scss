@@ -1,5 +1,6 @@
 @import '../style/colors.scss';
 
+
 .Project {
     padding: 15rem;
     display: flex;
@@ -106,4 +107,17 @@
             }
         }
     }
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1000ms;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
 }

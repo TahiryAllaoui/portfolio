@@ -1,9 +1,9 @@
 import '../style/About.scss';
 import reactLogo from '../assets/images/react-logo.png';
 
-function About() {
+function About({ className }: { className: string }) {
     return (
-        <div className='About'>
+        <div className={`About ${className}`}>
             <div className="description">
                 <p>Hello! I am</p>
                 <h1>Tahiry <br />

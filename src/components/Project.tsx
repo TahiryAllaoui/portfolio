@@ -15,7 +15,7 @@ interface Project {
 }
 
 
-function Project() {
+function Project({ className }: { className: string }) {
     let projetcItems: Project[] = [{
         bg: cards,
         name: 'Interactive card details',
@@ -54,7 +54,7 @@ function Project() {
         git: 'https://github.com/TahiryAllaoui/Space-tourism'
     }]
     return (
-        <div className="Project">
+        <div className={`Project ${className}`}>
             <h2>Projects:</h2>
             <div className="container">
                 {projetcItems.map((item) => <div key={item.name} className='project-cards'>

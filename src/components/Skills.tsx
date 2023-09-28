@@ -1,13 +1,12 @@
-import { useEffect, useRef } from "react";
-import "../style/Skills.scss";
 import { PieChart } from "react-minimal-pie-chart";
+import "../style/Skills.scss";
 
 interface SkillModel {
     tech: string;
     perf: number;
 }
 
-function Skills() {
+function Skills({ className }: { className: string }) {
     const skill: SkillModel[] = [{
         tech: 'React',
         perf: 75
@@ -29,7 +28,7 @@ function Skills() {
     }]
 
     return (
-        <div className="Skills">
+        <div className={`Skills ${className}`}>
 
             <h2>Skills:</h2>
             <div id="skill-container" >
