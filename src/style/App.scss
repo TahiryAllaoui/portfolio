@@ -12,6 +12,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  overflow-y: auto;
+  overflow-x: hidden;
 
   .line {
     width: 100%;
