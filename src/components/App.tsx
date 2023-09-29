@@ -5,6 +5,7 @@ import Project from './Project'
 import Skills from './Skills'
 
 function App() {
+  
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       console.log(entry);
