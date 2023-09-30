@@ -52,7 +52,8 @@ function Project({ className }: { className: string }) {
         description: 'A multi-page webstie about a trip to the space',
         link: 'https://space-tourism-site-fem.netlify.app/',
         git: 'https://github.com/TahiryAllaoui/Space-tourism'
-    }]
+    }];
+    
     return (
         <div className={`Project ${className}`}>
             <h2>Projects:</h2>
