@@ -47,14 +47,15 @@ function Skills({ className }: { className: string }) {
     useEffect(()=>{
         let pie = document.querySelectorAll('.pie') as NodeListOf<HTMLElement>;
         pie.forEach((el) => el.style.animation = 'fade-in 500ms');
-    },[scrollIndex])
+    },[scrollIndex]);
+    let body = document.querySelector('body') as HTMLElement;
 
     return (
         <div className={`Skills ${className}`} id="skills">
 
             <h2>Skills:</h2>
             <div id="skill-container" >
-                { scrollIndex < 1 ? <FiChevronLeft className='scroll left' onClick={handleLeft}/> : <p style={{width: '2rem'}}></p>}
+                { scrollIndex < 1 ? <FiChevronLeft className='scroll left' onClick={handleLeft}/> : <p className="placeholder" style={{width: '2rem',display: body.clientWidth <= 428 ? 'none' : 'block' }}></p>}
                 {scrollIndex < 1 ? skillFirst.map(item => <div className="pie" key={item.tech}>
                     <PieChart
                         className="chart"
@@ -104,7 +105,7 @@ function Skills({ className }: { className: string }) {
                 </div>
                 </div>
                  )}
-            { scrollIndex  > 0 ? <FiChevronRight className='scroll right' onClick={handleRight} /> : <p style={{width: '2rem'}}></p>}
+            { scrollIndex  > 0 ? <FiChevronRight className='scroll right' onClick={handleRight} /> : <p className="placeholder" style={{width: '2rem', display: body.clientWidth <= 428 ? 'none' : 'block' }}></p>}
             </div>
         </div >
     );
