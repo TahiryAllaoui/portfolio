@@ -30,7 +30,7 @@ function Contact({className}:{className : string}) {
                         <label htmlFor="">Write here:</label>
                         <textarea cols={30} rows={10} placeholder='Aa'></textarea>
                 </div>
-                <button className='submit-button' disabled={false}>Submit</button>
+                <button className='submit-button'>Submit</button>
             </form>
         </div>
     </div>

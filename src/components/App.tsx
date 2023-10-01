@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import '../style/App.scss'
 import About from './About'
+import Contact from './Contact'
 import Header from './Header'
 import Project from './Project'
 import Skills from './Skills'
-import Contact from './Contact'
 
 function App() {
   const [nameClass, setNameClass] = useState('');
@@ -24,11 +24,9 @@ function App() {
     const hiddenElements = document.querySelectorAll('.hidden');
     hiddenElements.forEach((elmts) => observer.observe(elmts));
   }, 10)
-  
 
   return (
     <div className='app'>
-      <div className="line"></div>
       <Header />
       <About className={nameClass}  />
       <Skills className={nameClass}  />

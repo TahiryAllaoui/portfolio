@@ -83,7 +83,10 @@
                     border: 2px solid rgba(255,255,255,0.2);
                     color: rgba(255,255,255,0.3);
                 }
-                background-color: $Hover;
+                &:hover {
+                    background-color: $Hover;
+                }
+                background-color: $Secondary;
                 color: $Color;
                 border: 2px solid rgba(255,255,255,0.2);
                 border-radius: 8px;
