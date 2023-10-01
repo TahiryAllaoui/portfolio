@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import '../style/Header.scss';
+import { SlMenu } from 'react-icons/sl';
 
 
 function Header() {
@@ -24,6 +25,7 @@ function Header() {
     return (
         <div className='Header'>
             <h2>Portfolio</h2>
+            <SlMenu className='menu'/>
             <div className="assets">
                 <a id='#about_' className='links' onClick={handleScroll}>About</a>
                 <a id='#skills_' className='links' onClick={handleScroll}>Skills</a>

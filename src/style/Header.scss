@@ -13,6 +13,7 @@
 .Header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 0 15%;
     background-color: $Primary;
     color: $Color;
@@ -44,11 +45,11 @@
 
             &:last-child {
                 position: relative;
-                height: 50%;
+                height: 2.5rem;
                 border-radius: 5rem;
                 margin-left: 2rem;
                 transition: all 300ms;
-                width: 25%;
+                width: 8rem;
                 background-color: black;
                 overflow: hidden;
 
