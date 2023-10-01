@@ -12,7 +12,7 @@ function Contact({className}:{className : string}) {
                 <div className="logos">
                     <a href="#"><SlSocialGithub /></a> 
                     <a href="#"><SlSocialGoogle /></a>
-                    <a href='#'><SlSocialFacebook /></a>
+                    <a href='https://www.facebook.com/tahiry.alloui.7'><SlSocialFacebook /></a>
                 </div>
             </div>
             <form>

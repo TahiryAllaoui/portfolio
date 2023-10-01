@@ -8,12 +8,13 @@ function Header() {
         let id = e.currentTarget.id;
         let element = document.querySelector(id.replace("_", "")) as HTMLElement;
         let aElement = document.querySelectorAll('.Header .assets a') as NodeListOf<HTMLElement>;
-        aElement.forEach((elmt) => {
-            if( id == elmt.id) {
+        for(let i = 0; i < aElement.length - 1; i++) {
+            if( id == aElement[i].id) {
                 e.currentTarget.style.backgroundColor = '#FF3333';
             }
-            else elmt.style.backgroundColor = 'transparent';
-        } )
+            else aElement[i].style.backgroundColor = 'transparent';
+        }
+
         element.scrollIntoView({behavior: 'smooth'});
     };
 
