@@ -1,4 +1,27 @@
 @import '../style/colors.scss';
+@keyframes levitate-left {
+    0% {transform: translateX(0);}
+    50% {transform: translateX(5px);}
+    100% {transform: translateX(0);}
+}
+@keyframes levitate-right {
+    0% {transform: translateX(0);}
+    50% {transform: translateX(-5px);}
+    100% {transform: translateX(0);}
+}
+@keyframes slide-left {
+    from { transform: translateX(0);
+    opacity: 1;}
+    to { transform: translateX(-200%); opacity: 0;}
+}
+@keyframes slide-right {
+    from { transform: translateX(0);}
+    to { transform: translateX(200%);}
+}
+@keyframes fade-in  {
+    from {opacity: 0; transform: translateX(50%);}
+    to {opacity: 1;transform: translateX(0);}
+}
 
 .Skills {
     padding: 15rem;
@@ -21,16 +44,31 @@
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
         border: 2px solid rgb(255, 255, 255, 0.1);
         border-radius: 1rem;
         background: radial-gradient(135deg, rgb(255, 255, 255, 0.1), rgb(255, 255, 255, 0));
+        overflow: hidden;
+
+        .scroll {
+            font-size: xx-large;
+            color: $Color;
+            cursor: pointer;
+        }
+        .left {
+            
+            animation: levitate-left 1000ms infinite;
+        }
+        .right {
+            
+            animation: levitate-right 1000ms infinite;
+        }
 
         .pie {
             padding: 0 3rem;
             position: relative;
-            width: 10rem;
-            height: 10rem;
+            width: 8rem;
+            height: 8rem;
             display: flex;
             flex-direction: column;
             align-items: center;
