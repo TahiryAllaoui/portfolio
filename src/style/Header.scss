@@ -25,19 +25,50 @@
     left: 0;
     z-index: 8;
 
+    @media (max-width: 428px) {
+        padding: 0 1rem;
+        border-bottom: 5px solid $Secondary;
+        width: 91%;
+        position: fixed;
+    }
+
+     h2 {
+        @media (max-width: 428px) {
+            font-size: large;
+        }
+     }
+
     .assets {
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 45%;
 
+        @media (max-width: 428px) {
+            position: absolute;
+            left: 100%;
+            top: 0;
+            min-height: 100vh;
+            height: auto;
+            width: 100%;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 3rem;
+            padding-top: 3rem;
+            z-index: 1;
+            transition: left 300ms;
+            background-color: #3d3d3d;
+        }
+
 
 
         .links {
-
-            // &:first-child {
-            //     background-color: $Secondary;
-            // }
+            @media (max-width: 428px) {
+                font-size: large;
+                justify-content: flex-start;
+                padding-left: 1rem;
+            }
                 cursor: pointer;
             &:hover {
                 background-color: $Secondary;
@@ -52,6 +83,9 @@
                 width: 8rem;
                 background-color: black;
                 overflow: hidden;
+                @media (max-width: 428px) {
+                    padding-left: 0rem;
+                }
 
                 a {
                     text-decoration: none;
@@ -80,7 +114,9 @@
                     height: 50px;
                     background: linear-gradient(60deg, transparent, $Secondary, $Secondary);
                     transform-origin: bottom right;
-                    animation: border-light 6s linear infinite;
+                    animation: border-light 6s linear infinite; 
+                    @media (max-width: 428px) {
+        display: none;                }
                 }
 
                 &::after {
@@ -93,7 +129,9 @@
                     background: linear-gradient(60deg, transparent, $Secondary, $Secondary);
                     transform-origin: bottom right;
                     animation: border-light 6s linear infinite;
-                    animation-delay: -3s;
+                    animation-delay: -3s; 
+                    @media (max-width: 428px) {
+        display: none;                } 
                 }
 
 

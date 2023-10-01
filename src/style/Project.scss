@@ -25,7 +25,7 @@
         color: $Color;
 
         @media (max-width: 428px) {
-            font-size: x-large;
+            font-size: large;
         }
     }
 
@@ -78,7 +78,7 @@
 
             @media (max-width: 428px) {
                 width: 75%;
-                height: 25rem;
+                height: 20rem;
             }
             
             
@@ -103,10 +103,16 @@
                 .detail-list {
                     .project-name {
                         color: $Color;
+                        @media (max-width: 428px) {
+                            font-size: large;
+                        }
                     }
 
                     .project-description {
                         color: rgb(255, 255, 255, 0.5);
+                        @media (max-width: 428px) {
+                            font-size: small;
+                        }
                     }
                 }
             }

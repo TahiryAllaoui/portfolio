@@ -31,7 +31,8 @@
     align-items: flex-start;
     justify-content: center;
     @media (max-width: 428px) {
-        padding: 0 1rem;
+        padding: 0 1rem 7rem;
+        height: fit-content;
     }
 
     h2 {
@@ -39,7 +40,7 @@
         color: $Color;
 
         @media (max-width: 428px) {
-            font-size: x-large;
+            font-size: large;
         }
     }
 

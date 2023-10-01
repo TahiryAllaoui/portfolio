@@ -1,16 +1,16 @@
-import { useEffect } from 'react';
+import { SlClose, SlMenu } from 'react-icons/sl';
 import '../style/Header.scss';
-import { SlMenu } from 'react-icons/sl';
+import { useState } from 'react';
 
 
 function Header() {
-
+    let body = document.querySelector('body') as HTMLElement;
     const handleScroll = (e: React.MouseEvent<HTMLElement> ) => {
         let id = e.currentTarget.id;
         let element = document.querySelector(id.replace("_", "")) as HTMLElement;
         let aElement = document.querySelectorAll('.Header .assets a') as NodeListOf<HTMLElement>;
         for(let i = 0; i < aElement.length - 1; i++) {
-            if( id == aElement[i].id) {
+            if( id == aElement[i].id && body.clientWidth > 428) {
                 e.currentTarget.style.backgroundColor = '#FF3333';
             }
             else aElement[i].style.backgroundColor = 'transparent';
@@ -18,14 +18,37 @@ function Header() {
 
         element.scrollIntoView({behavior: 'smooth'});
     };
+    const [clicked, setClicked] = useState(false);
+    const handleOpen = () => {
+        let assets = document.querySelector('.Header .assets') as HTMLElement;
+        let app = document.querySelector('.app') as HTMLElement;
+        console.log(app)
+        assets.style.left = '40%';
+        app.style.overflow = 'hidden';
+        setTimeout(()=> {
+            assets.style.boxShadow = '-10rem 0 50px 15px rgba(0,0,0,0.5)';
+            setClicked(!clicked);
+        },100)
+    };
+    const handleClose = () => {
+        let assets = document.querySelector('.Header .assets') as HTMLElement;
+        assets.style.left = '100%';
+        let app = document.querySelector('.app') as HTMLElement;
 
-    useEffect(() => {
+        app.style.overflowY = 'auto';
 
-    },[])
+        setTimeout(()=> {
+            assets.style.boxShadow = 'none';
+            setClicked(!clicked);
+        },50) 
+    };
+
     return (
         <div className='Header'>
             <h2>Portfolio</h2>
-            <SlMenu className='menu'/>
+            {!clicked ? < SlMenu className='menu' style={{display: body.clientWidth <= 428 ? 'block' : 'none'}} onClick={handleOpen} /> : 
+                <SlClose className='close' style={{display: body.clientWidth <= 428 ? 'block' : 'none', zIndex: '2'}} onClick={handleClose}/>
+            }
             <div className="assets">
                 <a id='#about_' className='links' onClick={handleScroll}>About</a>
                 <a id='#skills_' className='links' onClick={handleScroll}>Skills</a>
