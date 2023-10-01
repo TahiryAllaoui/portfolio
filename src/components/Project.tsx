@@ -55,7 +55,7 @@ function Project({ className }: { className: string }) {
     }];
     
     return (
-        <div className={`Project ${className}`}>
+        <div className={`Project ${className}`} id='project'>
             <h2>Projects:</h2>
             <div className="container">
                 {projetcItems.map((item) => <div key={item.name} className='project-cards'>

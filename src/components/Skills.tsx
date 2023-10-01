@@ -50,7 +50,7 @@ function Skills({ className }: { className: string }) {
     },[scrollIndex])
 
     return (
-        <div className={`Skills ${className}`}>
+        <div className={`Skills ${className}`} id="skills">
 
             <h2>Skills:</h2>
             <div id="skill-container" >

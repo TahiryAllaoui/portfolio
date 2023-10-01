@@ -4,6 +4,7 @@ import About from './About'
 import Header from './Header'
 import Project from './Project'
 import Skills from './Skills'
+import Contact from './Contact'
 
 function App() {
   const [nameClass, setNameClass] = useState('');
@@ -29,9 +30,10 @@ function App() {
     <div className='app'>
       <div className="line"></div>
       <Header />
-      <About className={nameClass} />
+      <About className={nameClass}  />
       <Skills className={nameClass}  />
       <Project className={nameClass}  />
+      <Contact className={nameClass} />
     </div>
   )
 }

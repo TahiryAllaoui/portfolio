@@ -3,7 +3,7 @@ import reactLogo from '../assets/images/react-logo.png';
 
 function About({ className }: { className: string }) {
     return (
-        <div className={`About ${className}`}>
+        <div className={`About ${className}`} id='about'>
             <div className="description">
                 <p>Hello! I am</p>
                 <h1>Tahiry <br />
