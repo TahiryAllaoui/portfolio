@@ -76,6 +76,9 @@
         p {
             margin: 0;
             font-size: large;
+            @media (max-width: 768px) {
+                font-size: small;
+            }
             @media (max-width: 428px) {
                 font-size: small;
             }

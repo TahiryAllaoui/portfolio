@@ -144,8 +144,12 @@
                     background: linear-gradient(60deg, transparent, $Secondary, $Secondary);
                     transform-origin: bottom right;
                     animation: border-light 6s linear infinite; 
+                    @media (max-width: 768px) {
+                        display: none;                
+                    }
                     @media (max-width: 428px) {
-        display: none;                }
+                        display: none;                
+                    }
                 }
 
                 &::after {
@@ -159,8 +163,12 @@
                     transform-origin: bottom right;
                     animation: border-light 6s linear infinite;
                     animation-delay: -3s; 
+                    @media (max-width: 768px) {
+                        display: none;              
+                     }
                     @media (max-width: 428px) {
-        display: none;                } 
+                        display: none;                
+                    } 
                 }
 
 

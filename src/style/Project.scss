@@ -12,10 +12,13 @@
 
 
 .Project {
-    padding: 0 15rem;
+    padding: 7rem 15rem;
     display: flex;
     flex-direction: column;
     height: auto;
+    @media (max-width: 768px) {
+        padding: 7rem 1rem;
+    }
     @media (max-width: 428px) {
         padding: 1rem;
     }
@@ -24,6 +27,9 @@
         font-size: xx-large;
         color: $Color;
 
+        @media (max-width: 768px) {
+            font-size: large;
+        }
         @media (max-width: 428px) {
             font-size: large;
         }
@@ -36,6 +42,12 @@
         flex-wrap: wrap;
         gap: 1rem;
 
+        @media (max-width: 768px) {
+            flex-direction: row;
+            align-items: center;
+            gap: 1rem;
+            justify-content: center;
+        }
         @media (max-width: 428px) {
             flex-direction: column;
             align-items: center;
@@ -76,6 +88,10 @@
             transform: scale(1);
             transition: transform 300ms;
 
+            @media (max-width: 768px) {
+                width: 25%;
+                height: 22rem;
+            }
             @media (max-width: 428px) {
                 width: 75%;
                 height: 20rem;
@@ -103,6 +119,9 @@
                 .detail-list {
                     .project-name {
                         color: $Color;
+                        @media (max-width: 768px) {
+                            font-size: large;
+                        }
                         @media (max-width: 428px) {
                             font-size: large;
                         }
@@ -110,6 +129,9 @@
 
                     .project-description {
                         color: rgb(255, 255, 255, 0.5);
+                        @media (max-width: 768px) {
+                            font-size: small;
+                        }
                         @media (max-width: 428px) {
                             font-size: small;
                         }
@@ -121,6 +143,14 @@
                 display: flex;
                 justify-content: space-between;
                 width: 95%;
+                @media (max-width: 768px) {
+                    flex-direction: column;
+                    gap: 0.3rem;
+                }
+                @media (max-width: 428px) {
+                    flex-direction: column;
+                    gap: 0.3rem;
+                }
 
                 .preview {
                     background-color: $Secondary;
@@ -133,6 +163,16 @@
                     color: $Color;
                     text-decoration: none;
                     transition: all 300ms;
+                    @media (max-width: 768px) {
+                        font-size: small;
+                        height: 2rem;
+                        width: 100%;
+                    }
+                    @media (max-width: 428px) {
+                        font-size: small;
+                        height: 2rem;
+                        width: 100%;
+                    }
 
                     &:hover {
                         background-color: $Hover;
@@ -151,6 +191,16 @@
                     color: $Color;
                     text-decoration: none;
                     transition: all 300ms;
+                    @media (max-width: 768px) {
+                        font-size: small;
+                        height: 2rem;
+                        width: 100%;
+                    }
+                    @media (max-width: 428px) {
+                        font-size: small;
+                        height: 2rem;
+                        width: 100%;
+                    }
 
                     &:hover {
                         background-color: $Hover;

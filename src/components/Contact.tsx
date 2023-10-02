@@ -28,7 +28,7 @@ function Contact({className}:{className : string}) {
                 </div>
                 <div className="comment">
                         <label htmlFor="">Write here:</label>
-                        <textarea cols={30} rows={10} placeholder='Aa'></textarea>
+                        <textarea cols={1} rows={1} placeholder='Aa'></textarea>
                 </div>
                 <button className='submit-button'>Submit</button>
             </form>
