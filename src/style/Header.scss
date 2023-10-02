@@ -24,7 +24,14 @@
     top: 0;
     left: 0;
     z-index: 8;
+    height: 4rem;
 
+    @media (max-width: 1024px) {
+        padding: 0 1rem;
+        border-bottom: 5px solid $Secondary;
+        width: 97%;
+        position: fixed;
+    }
     @media (max-width: 768px) {
         padding: 0 1rem;
         border-bottom: 5px solid $Secondary;
@@ -56,6 +63,7 @@
         justify-content: space-between;
         align-items: center;
         width: 45%;
+        height: 100%;
 
         @media (max-width: 768px) {
             position: absolute;

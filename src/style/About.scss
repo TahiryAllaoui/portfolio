@@ -17,6 +17,11 @@
     height: 100vh;
     align-items: center;
 
+    @media (max-width: 1024px) {
+        padding: 0rem 1rem;
+        justify-content: space-evenly;
+    }
+
     @media (max-width: 768px) {
         padding: 0rem 1rem;
         justify-content: space-evenly;
@@ -33,6 +38,9 @@
         color: $Color ;
         width: 50%;
 
+        @media (max-width: 1024px) {
+            padding-left: 1rem;
+        }
         @media (max-width: 768px) {
             width: 85%;
             padding-left: 1rem;
@@ -50,6 +58,12 @@
             font-size: 5rem;
             line-height: 3rem;
 
+            @media (max-width: 1024px) {
+                font-size: 3rem;
+                flex-direction: column;
+                line-height: 1.5rem;
+                margin: 1rem;
+            }
             @media (max-width: 768px) {
                 font-size: xx-large;
                 flex-direction: column;
@@ -76,6 +90,9 @@
         p {
             margin: 0;
             font-size: large;
+            @media (max-width: 1024px) {
+                font-size: small;
+            }
             @media (max-width: 768px) {
                 font-size: small;
             }
@@ -104,6 +121,11 @@
         background-size: contain;
         background-position: center;
 
+        @media (max-width: 1024px) {
+            width: 30%;
+            height: 55%;
+            flex-direction: column;
+        }
         @media (max-width: 768px) {
             width: 60%;
             height: 50%;
